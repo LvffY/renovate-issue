@@ -28,7 +28,7 @@ stages:
                 echo "Hello world !"
           # Maven v3
           # Build, test, and deploy with Apache Maven.
-          - task: Maven@3
+          - task: Maven@4.235.1
             displayName: This is simple maven task to illustrate the version update
             inputs:
               mavenPOMFile: 'pom.xml' # string. Required. Maven POM file. Default: pom.xml.
