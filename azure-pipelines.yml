@@ -5,7 +5,7 @@ resources:
       type: github
       endpoint: github
       name: tox-dev/azure-pipelines-template
-      ref: refs/tags/0.1
+      ref: refs/tags/0.2.0
 
 trigger:
   batch: true
@@ -20,7 +20,7 @@ stages:
           vmImage: ubuntu-latest
         steps:
 
-          - task: Bash@3
+          - task: Bash@3.241.1
             displayName: 'This is a simple test task'
             inputs:
               targetType: 'inline'
@@ -28,7 +28,7 @@ stages:
                 echo "Hello world !"
           # Maven v3
           # Build, test, and deploy with Apache Maven.
-          - task: Maven@3
+          - task: Maven@3.235.1
             displayName: This is simple maven task to illustrate the version update
             inputs:
               mavenPOMFile: 'pom.xml' # string. Required. Maven POM file. Default: pom.xml.
